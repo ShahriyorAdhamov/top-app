@@ -1,9 +1,10 @@
 import React from 'react'
-import { buttonProps } from './button.props'
+import { ButtonProps } from './button.props'
 import cn from 'classnames'
 import styles from './button.module.css'
+import ArrowIcon from './arrow.svg'
 
-const Button = ({children, appearance, className, ...props}: buttonProps): JSX.Element => {
+const Button = ({children, appearance, arrow, className, ...props}: ButtonProps): JSX.Element => {
   return (
     <button className={cn(
       styles.button, 
@@ -12,7 +13,18 @@ const Button = ({children, appearance, className, ...props}: buttonProps): JSX.E
       {[styles.ghost]: appearance === 'ghost'}
       )}
       {...props}
-      >{children}</button>
+      >
+        {children}
+        {arrow !== 'none' && (
+				<span
+					className={cn(styles.arrow, {
+						[styles.down]: arrow === 'down',
+					})}
+				>
+					<ArrowIcon />
+				</span>
+			)}
+      </button>
   )
 }
 

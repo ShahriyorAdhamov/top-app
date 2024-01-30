@@ -1,8 +1,8 @@
 import React from 'react';
-import { paragraphProps } from './pTag.props';
+import { ParagraphProps } from './pTag.props';
 import cn from 'classnames';
 import styles from './pTag.module.css'
-const PTag = ({children, size, className, ...props}: paragraphProps) => {
+const PTag = ({children, size, className, ...props}: ParagraphProps) => {
   return (
     <p className={cn(
         className,
