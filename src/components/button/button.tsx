@@ -4,7 +4,7 @@ import cn from 'classnames'
 import styles from './button.module.css'
 import ArrowIcon from './arrow.svg'
 
-const Button = ({children, appearance, arrow, className, ...props}: ButtonProps): JSX.Element => {
+const Button = ({children, appearance, arrow='none', className, ...props}: ButtonProps): JSX.Element => {
   return (
     <button className={cn(
       styles.button, 
