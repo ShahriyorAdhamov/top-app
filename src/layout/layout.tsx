@@ -17,7 +17,7 @@ function Layout({ children }: LayoutProps) {
 }
 
 
-export const widthLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
+export const withLayout = <T extends Record<string, unknown>>(Component: FunctionComponent<T>) => {
   return function widthLayoutComponent (props: T) {
     return (
       <Layout>

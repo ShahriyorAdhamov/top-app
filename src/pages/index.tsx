@@ -5,10 +5,10 @@ import styles from '@/styles/Home.module.css'
 import HTag from '@/components/htag/htag'
 import Button from '@/components/button/button'
 import { useState } from 'react'
-import { widthLayout } from '@/layout/layout'
+import { withLayout } from '@/layout/layout'
 import { GetStaticProps } from 'next'
 import axios from 'axios'
-import { MenuItem } from '../../interfaces/manu.interface'
+import { MenuItem } from '../../interfaces/menu.interface'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,7 +27,7 @@ function Home({menu}: HomeProps): JSX.Element {
   )
 }
 
-export default widthLayout(Home);
+export default withLayout(Home);
 
 export const getStaticProps: GetStaticProps = async() => {
   const firstCategory = 0;
