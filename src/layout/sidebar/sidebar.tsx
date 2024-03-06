@@ -1,9 +1,11 @@
-import React from 'react'
+import Menu from '../menu/menu';
 
-function Sidebar({...props}) {
-  return (
-    <div {...props}>Sidebar</div>
-  )
+function Sidebar({ ...props }) {
+	return (
+		<div {...props}>
+			<Menu />
+		</div>
+	);
 }
 
-export default Sidebar
+export default Sidebar;

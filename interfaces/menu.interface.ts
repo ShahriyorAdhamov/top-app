@@ -1,14 +1,23 @@
-export interface PageItem {
-    alias: string;
-    title: string;
-    _id: string;
-    category: string;
-} 
+import { PageCategory } from './page.interface';
 
 export interface MenuItem {
-    pages: PageItem[];
-    _id: {
-        secondCategory: string;
-    }
+	_id: {
+		secondCategory: string;
+	};
+	isOpened?: boolean;
+	pages: PageItem[];
+}
 
+export interface PageItem {
+	alias: string;
+	title: string;
+	_id: string;
+	category: string;
+}
+
+export interface IFirstLevelMenu {
+	route: string;
+	name: string;
+	icon: JSX.Element;
+	id: PageCategory;
 }
