@@ -16,13 +16,6 @@ function Home({menu}: HomeProps): JSX.Element {
   const [isClicked, setIsClicked] = useState(false);
   return (
     <>
-     <HTag tag = 'h1'>hello</HTag>
-     <Button appearance='ghost' arrow={isClicked? 'down' : 'right'} onClick={() => setIsClicked(prev => !prev)}>
-      click
-     </Button>
-     <ul>
-        {menu.map((m) => (<li key={m._id.secondCategory}>{m._id.secondCategory}</li>))}
-     </ul>
     </>
   )
 }
